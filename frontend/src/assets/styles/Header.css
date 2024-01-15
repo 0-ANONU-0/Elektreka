@@ -1,0 +1,111 @@
+.main-nav {
+    background-color: #03ac13;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    /* position: sticky; // both line of code for sticking the navbar on top even when scrolling
+    top: 0; */
+}
+
+.nav-title {
+    font-size: 1.8rem;
+    text-decoration: none; 
+    font-weight: bold;
+    color: #fff;
+    margin: 1rem;
+}
+
+.nav-search-box {
+    width: 600px;
+    max-width: 100%;
+    height: 50px;
+    border-radius: 0.1rem;
+    position: relative;
+    left: 0;
+}
+.search-input {
+    width: 100%;
+    height: 50px;
+    border-radius: 0.3rem;
+    border-style: none;
+    padding: 10px;
+    outline: none;
+}
+.search-btn {
+    background-color: #fff;
+    border-style: none;
+    height: 0;
+    width: 0;
+    position: absolute;
+    right: 50px;
+    top: 5px;
+}
+.btn-icon{
+    font-size: 2.5rem;
+    color: #03ac13;
+}
+
+.main-nav-list {
+    display: flex;
+    margin-top: 10px;
+}
+
+nav ul li {
+    list-style: none;
+    width: 125px;
+    margin: 0 0.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.list-icon {
+    font-size: 30px;
+    margin: 5px;
+}
+
+.nav-menu{
+    display: flex;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+}
+.nav-menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.2rem;
+}
+
+@media (max-width: 640px) {
+    .main-nav {
+        height: 150px;
+    }
+
+    .nav-title {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    .main-nav-list {
+       position: absolute;
+       top: 0.5rem;
+       right: 0;
+    }
+
+    .nav-search-box {
+        top: 3rem;
+        width: 640px;
+        margin: auto;
+    }
+    
+}
