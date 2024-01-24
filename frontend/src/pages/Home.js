@@ -1,23 +1,21 @@
 import React from 'react'
-import { useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Product from '../components/Product';
-import axios from 'axios';
+import Loader from '../components/Loader';
+import Message from '../components/Message';
+import { useGetProductsQuery } from '../slices/productsApiSlice';
 
 const Home = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const {data} = await axios.get('/api/products');
-      setProducts(data);
-    } 
-
-    fetchProducts();
-  }, []); //the 2nd argument [] is array of dependencies, if smth inside and that value changes useEffect runs. If want to run useEffect once leave empty.
-
+  const {data: products, isLoading, error} = useGetProductsQuery();
   return (
     <>
+      {isLoading ? (
+        <Loader />
+      ) : error ? (
+        <Message variant='danger'>
+          { error?.data?.message || error.error }
+        </Message>
+      ) : (<>
       <h1 className='product-header'>Latest Products</h1>
       <Row>
         {products.map( (product) => (
@@ -26,6 +24,7 @@ const Home = () => {
             </Col>
         ))}
       </Row>
+      </>)}
     </>
   )
 }
