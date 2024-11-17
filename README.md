@@ -7,7 +7,7 @@
 ## Top 5 most important files
 
 | File Path with Link | Purpose |
-|---------------------|---------|
+|:----|:----|
 |[Link](https://github.com/CloudedByLight/DigitEyes490/blob/main/digiteyes/src/components/optometristInvoices/InvoiceTable.tsx) | | Optometrist Invoice Table |
 
 
