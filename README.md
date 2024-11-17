@@ -8,7 +8,7 @@
 
 | File Path with Link | Purpose |
 |:----|:----|
-|[Link](https://github.com/CloudedByLight/DigitEyes490/blob/main/digiteyes/src/components/optometristInvoices/InvoiceTable.tsx) | | Optometrist Invoice Table |
+|[Link](https://github.com/CloudedByLight/DigitEyes490/blob/main/digiteyes/src/components/optometristInvoices/InvoiceTable.tsx) | | O |
 
 
 ## About
